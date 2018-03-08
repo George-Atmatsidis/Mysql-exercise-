@@ -19,6 +19,12 @@ alter table EMPLOYEES drop ADDRESS2;
 alter table EMPLOYEES modify ADDRESS varchar(250) null;
 alter table EMPLOYEES modify SALARY decimal(8,2) null;
 
+4)
+create table DEPARTMENTS( 
+DNUMBER integer not null, 
+DNAME varchar(30) not null, 
+primary key (DNUMBER)
+);
 
 
 
