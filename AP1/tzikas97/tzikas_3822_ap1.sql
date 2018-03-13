@@ -12,7 +12,7 @@ USE `ap1_3822`;
 CREATE TABLE `EMPLOYEES`(
 `FNAME` VARCHAR(15),
 `LNAME` VARCHAR(15),
-`SSN` INT(7) NOT NULL,
+`SSN` CHAR(7) NOT NULL,
 PRIMARY KEY (`SSN`)
 );
 /*
@@ -21,7 +21,7 @@ PRIMARY KEY (`SSN`)
 +-------+-------------+------+-----+---------+-------+
 | FNAME | varchar(15) | YES  |     | NULL    |       |
 | LNAME | varchar(15) | YES  |     | NULL    |       |
-| SSN   | int(7)      | NO   | PRI | NULL    |       |
+| SSN   | char(7)     | NO   | PRI | NULL    |       |
 +-------+-------------+------+-----+---------+-------+
 */
 
@@ -38,7 +38,7 @@ ALTER TABLE `EMPLOYEES` ADD COLUMN `SALARY` INT NULL;
 +----------+-------------+------+-----+---------+-------+
 | FNAME    | varchar(15) | YES  |     | NULL    |       |
 | LNAME    | varchar(15) | YES  |     | NULL    |       |
-| SSN      | int(7)      | NO   | PRI | NULL    |       |
+| SSN      | char(7)     | NO   | PRI | NULL    |       |
 | ADDRESS  | varchar(40) | YES  |     | NULL    |       |
 | ADDRESS2 | varchar(40) | YES  |     | NULL    |       |
 | SALARY   | int(11)     | YES  |     | NULL    |       |
@@ -61,7 +61,7 @@ ALTER TABLE `EMPLOYEES` MODIFY COLUMN `SALARY` DECIMAL(10,2) NULL;
 +---------+---------------+------+-----+---------+-------+
 | FNAME   | varchar(15)   | YES  |     | NULL    |       |
 | LNAME   | varchar(15)   | YES  |     | NULL    |       |
-| SSN     | int(7)        | NO   | PRI | NULL    |       |
+| SSN     | char(7)       | NO   | PRI | NULL    |       |
 | ADDRESS | varchar(250)  | YES  |     | NULL    |       |
 | SALARY  | decimal(10,2) | YES  |     | NULL    |       |
 +---------+---------------+------+-----+---------+-------+
@@ -117,7 +117,7 @@ ALTER TABLE `EMPLOYEES` ADD CONSTRAINT `FK_DNUMBER2` FOREIGN KEY (`SSN`) REFEREN
 +---------+---------------+------+-----+---------+-------+
 | FNAME   | varchar(15)   | YES  |     | NULL    |       |
 | LNAME   | varchar(15)   | YES  |     | NULL    |       |
-| SSN     | int(7)        | NO   | PRI | NULL    |       |
+| SSN     | char(7)       | NO   | PRI | NULL    |       |
 | ADDRESS | varchar(250)  | YES  |     | NULL    |       |
 | SALARY  | decimal(10,2) | YES  |     | NULL    |       |
 +---------+---------------+------+-----+---------+-------+
@@ -125,7 +125,7 @@ ALTER TABLE `EMPLOYEES` ADD CONSTRAINT `FK_DNUMBER2` FOREIGN KEY (`SSN`) REFEREN
 
 /*
 ** Ερώτημα 7)
-** Διαγραφή στήλης DNUMBER από τον πίνακα DEPARTMENTS
+** Διαγραφή στήλης SSN από τον πίνακα EMPLOYEES
 ** Για να γίνει διαγραφή:
 */
 ALTER TABLE `EMPLOYEES` DROP FOREIGN KEY `FK_DNUMBER2`;
