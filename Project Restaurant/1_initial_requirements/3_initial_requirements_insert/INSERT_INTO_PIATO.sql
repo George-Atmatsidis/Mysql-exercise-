@@ -1,6 +1,6 @@
 INSERT
 INTO
-  `TRAPEZI`
+  `PIATO`
 (
   `ANAG`,
   `TIMH`,
