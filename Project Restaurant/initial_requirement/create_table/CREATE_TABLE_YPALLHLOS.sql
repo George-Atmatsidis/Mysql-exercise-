@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS YPALLHLOS (
-    ypan CHAR(4) NOT NULL,
-    epitheto VARCHAR(30) NOT NULL,
-    onoma VARCHAR(15) NOT NULL,
-    hm_gen DATE NOT NULL,
-    PRIMARY KEY (ypan)
-);
