@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS PIATO (
+  anag CHAR(5) NOT NULL,
+  timh DECIMAL(5,2) NOT NULL,
+  merides BLOB NOT NULL,
+  pypan CHAR(4) NOT NULL,
+  PRIMARY KEY (anag)
+  );
