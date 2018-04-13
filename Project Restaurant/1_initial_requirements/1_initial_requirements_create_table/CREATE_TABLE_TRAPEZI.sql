@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS TRAPEZI(
+  trno INT NOT NULL, 
+  kathismata INT NULL DEFAULT NULL, 
+  yptrno CHAR(4) NOT NULL, 
+  PRIMARY KEY (trno)
+);
