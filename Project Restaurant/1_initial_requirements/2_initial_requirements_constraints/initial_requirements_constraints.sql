@@ -1,4 +1,4 @@
-ALTER TABLE 
+﻿ALTER TABLE 
   `TRAPEZI` 
 ADD 
   CONSTRAINT `yptrno_1`
